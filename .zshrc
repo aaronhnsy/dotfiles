@@ -26,7 +26,6 @@ source $ZSH/oh-my-zsh.sh
 typeset -aU path
 path+=("/home/axel/.local/bin")
 path+=("/opt/jdk-18.0.2.1+1/bin")
-path+=("/mnt/c/program files/npiperelay")
 
 # aliases
 alias ls="ls -lah"
@@ -37,8 +36,11 @@ alias pip="python -m pip"
 source "$HOME/.nvm/nvm.sh"
 source "$HOME/.nvm/bash_completion"
 
-# 1password ssh agent
-source "$HOME/.1password/ssh-agent.sh"
-
 # starship
 eval "$(starship init zsh)"
+
+# wsl specific
+if [[ $(uname -r) == (#s)*[mM]icrosoft*(#e) ]]; then
+    path+=("/mnt/c/program files/npiperelay")
+    source "$HOME/.1password/ssh-agent.sh"
+fi
