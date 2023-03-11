@@ -40,7 +40,7 @@ source "$HOME/.nvm/bash_completion"
 eval "$(starship init zsh)"
 
 # wsl specific
-if [[ $(uname -r) == (#s)*[mM]icrosoft*(#e) ]]; then
+if uname -r | grep -q 'microsoft'; then
     path+=("/mnt/c/program files/npiperelay")
     source "$HOME/.1password/ssh-agent.sh"
 fi
