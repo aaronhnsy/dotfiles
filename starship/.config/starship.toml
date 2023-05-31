@@ -154,5 +154,5 @@ style = "bg:#3e1a78 fg:#000000"
 format = '[ ♥ $time ]($style)'
 
 [character]
-success_symbol = " [\uf178](fg:#078d70) "
-error_symbol = " [✘](bold red) "
+success_symbol = " [\uf178](fg:#078d70)"
+error_symbol = " [✘](bold red)"
