@@ -25,7 +25,6 @@ source $ZSH/oh-my-zsh.sh
 # path
 typeset -aU path
 path+=("/home/axel/.local/bin")
-path+=("/opt/jdk-17.0.8+7/bin")
 
 # aliases
 alias ls="ls -lah"
