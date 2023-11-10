@@ -1,0 +1,12 @@
+[core]
+	autocrlf = false
+[user]
+	name = Axelancerr
+	email = axelancerr@gmail.com
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGfiPzXF5AQVew/F1WF4+UIwVQISzol6X2aSujGfUd5Y
+[commit]
+	gpgsign = true
+[gpg]
+	format = ssh
+[gpg "ssh"]
+	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
