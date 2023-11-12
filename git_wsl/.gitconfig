@@ -1,0 +1,12 @@
+[core]
+	autocrlf = false
+[user]
+	name = Axelancerr
+	email = axelancerr@gmail.com
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKXazHdvwhC9eX0brriN1EFUbab1+SmwguuPAIx7PCCW
+[commit]
+	gpgsign = true
+[gpg]
+	format = ssh
+[gpg "ssh"]
+	program = "/mnt/c/Users/Axel/AppData/Local/1Password/app/8/op-ssh-sign.exe"
