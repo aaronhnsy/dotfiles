@@ -1,4 +1,4 @@
-export SSH_AUTH_SOCK=$XDG_CONFIG_HOME/1password/ssh-agent.sock
+export SSH_AUTH_SOCK=$XDG_CACHE_HOME/1password/ssh-agent.sock
 
 ALREADY_RUNNING=$(ps -auxww | grep -q "[n]piperelay.exe -ei -s //./pipe/openssh-ssh-agent"; echo $?)
 
