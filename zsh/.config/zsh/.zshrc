@@ -12,7 +12,6 @@ plugins=(
 	poetry
 	python
 	rust
-	ssh-agent
 	starship
 	sudo
 	ufw
@@ -57,6 +56,7 @@ alias pip="python -m pip"
 
 # wsl 1password support
 if uname -r | grep -q 'microsoft'; then
-    path+=("/mnt/c/program files/npiperelay")
-    source "$XDG_CONFIG_HOME/1password/ssh-agent.sh"
+	path+=("/mnt/c/Windows/System32/OpenSSH/")
+	alias ssh="ssh.exe"
+	alias ssh-add="ssh-add.exe"
 fi
