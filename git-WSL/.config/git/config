@@ -1,5 +1,6 @@
 [core]
 	autocrlf = false
+	sshCommand = "ssh.exe"
 [user]
 	name = Axelancerr
 	email = axelancerr@gmail.com
