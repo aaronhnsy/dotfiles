@@ -56,5 +56,7 @@ alias pip="python -m pip"
 
 # wsl 1password support
 if uname -r | grep -q 'microsoft'; then
-	path+=("/mnt/c/Windows/System32/OpenSSH/")
+	path+=("/mnt/c/program files/openssh")
+	alias ssh="ssh.exe"
+	alias ssh-add="ssh-add.exe"
 fi
