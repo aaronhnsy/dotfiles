@@ -49,7 +49,7 @@ typeset -U path
 path+=("/home/axel/.local/bin")
 
 # aliases
-alias ls="ls -l --all --human-readable --color"
+alias ls="ls -lah --color"
 alias javaver="sudo update-alternatives --config java"
 alias pyver="sudo update-alternatives --config python"
 alias pip="python -m pip"
