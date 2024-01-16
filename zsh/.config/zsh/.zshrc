@@ -33,14 +33,14 @@ DISABLE_AUTO_TITLE="true"
 # oh-my-zsh - library settings
 HIST_STAMPS="yyyy-mm.dd"
 
-# locale
-LC_ALL="C.utf8"
-
 # iterm2
 zstyle ':omz:plugins:iterm2' shell-integration yes
 
 # starship
 export STARSHIP_CONFIG="$XDG_CONFIG_HOME/starship/starship.toml"
+
+# locale
+export LC_ALL="C.utf8"
 
 
 source $ZSH/oh-my-zsh.sh
