@@ -34,7 +34,7 @@ DISABLE_AUTO_TITLE="true"
 HIST_STAMPS="yyyy-mm.dd"
 
 # locale
-LC_ALL="C.UTF-8"
+LC_ALL="C.utf8"
 
 # iterm2
 zstyle ':omz:plugins:iterm2' shell-integration yes
