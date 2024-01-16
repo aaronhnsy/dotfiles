@@ -33,6 +33,8 @@ DISABLE_AUTO_TITLE="true"
 # oh-my-zsh - library settings
 HIST_STAMPS="yyyy-mm.dd"
 
+# locale
+LC_ALL="C.UTF-8"
 
 # iterm2
 zstyle ':omz:plugins:iterm2' shell-integration yes
