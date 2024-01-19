@@ -3,7 +3,7 @@
 [user]
 	name = aaronhnsy
 	email = aaronhnsy@gmail.com
-	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGfiPzXF5AQVew/F1WF4+UIwVQISzol6X2aSujGfUd5Y
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICNyHpAwS6d+7elda9t8WFyCnU6tTRbdlj4GgXTh/0Z8
 [commit]
 	gpgsign = true
 [gpg]

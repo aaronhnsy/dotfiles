@@ -47,6 +47,7 @@ export STARSHIP_CACHE="$XDG_CACHE_HOME/starship"
 
 # wakatime
 export WAKATIME_HOME="$XDG_CONFIG_HOME/wakatime"
+export WAKATIME_CLI_LOCATION="$XDG_DATA_HOME/wakatime"
 
 # wget
 export WGETRC="$XDG_CONFIG_HOME/wget/wgetrc"

@@ -59,3 +59,6 @@ if uname -r | grep -q 'microsoft'; then
 	alias ssh="ssh.exe"
 	alias ssh-add="ssh-add.exe"
 fi
+
+test -e "${ZDOTDIR}/.iterm2_shell_integration.zsh" && source "${ZDOTDIR}/.iterm2_shell_integration.zsh"
+
