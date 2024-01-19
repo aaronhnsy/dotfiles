@@ -12,7 +12,7 @@ plugins=(
 	starship
 	sudo
 	ufw
-	zsh-autoswitch-virtualenv
+	autoswitch_virtualenv
 	zsh-autosuggestions
 	zsh-syntax-highlighting
 )
