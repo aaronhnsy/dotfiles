@@ -1,8 +1,5 @@
-# zsh
-HISTFILE="$ZDOTDIR/.zsh_history"
-
-# oh-my-zsh - main settings
-export ZSH="$XDG_CONFIG_HOME/oh-my-zsh"
+# oh-my-zsh: main settings
+export ZSH="$XDG_DATA_HOME/omz"
 plugins=(
 	command-not-found
 	iterm2
@@ -19,19 +16,23 @@ plugins=(
 	zsh-autosuggestions
 	zsh-syntax-highlighting
 )
+ZSH_CUSTOM="$XDG_DATA_HOME/omz-plugins"
+ZSH_CACHE_DIR="$XDG_CACHE_HOME/omz"
 
-# oh-my-zsh - update settings
-zstyle ':omz:update' mode reminder
-zstyle ':omz:update' frequency 7
+# oh-my-zsh: update settings
+zstyle ':omz:update' mode disabled
 
-# oh-my-zsh - completion settings
+# oh-my-zsh: completion settings
+ZSH_COMPDUMP="$ZSH_CACHE_DIR/zcompdump"
 COMPLETION_WAITING_DOTS="true"
 
-# oh-my-zsh - automatic title
+# oh-my-zsh: automatic title
 DISABLE_AUTO_TITLE="true"
 
-# oh-my-zsh - library settings
-HIST_STAMPS="yyyy-mm.dd"
+# oh-my-zsh: library settings
+HIST_STAMPS="%d/%m/%Y"
+HISTFILE="$XDG_STATE_HOME/zsh/history"
+
 
 # iterm2
 zstyle ':omz:plugins:iterm2' shell-integration yes
