@@ -23,7 +23,6 @@ ZSH_CACHE_DIR="$XDG_CACHE_HOME/omz"
 zstyle ':omz:update' mode disabled
 
 # oh-my-zsh: completion settings
-ZSH_COMPDUMP="$ZSH_CACHE_DIR/zcompdump"
 COMPLETION_WAITING_DOTS="true"
 
 # oh-my-zsh: automatic title
@@ -36,9 +35,6 @@ HISTFILE="$XDG_STATE_HOME/zsh/history"
 
 # iterm2
 zstyle ':omz:plugins:iterm2' shell-integration yes
-
-# starship
-export STARSHIP_CONFIG="$XDG_CONFIG_HOME/starship/starship.toml"
 
 # locale
 export LC_ALL="C.utf8"
