@@ -1,0 +1,9 @@
+[submodule "omz/.local/share/omz-custom/plugins/zsh-autosuggestions"]
+	path = omz/.local/share/omz-custom/plugins/zsh-autosuggestions
+	url = https://github.com/zsh-users/zsh-autosuggestions
+[submodule "omz/.local/share/omz-custom/plugins/zsh-syntax-highlighting"]
+	path = omz/.local/share/omz-custom/plugins/zsh-syntax-highlighting
+	url = https://github.com/zsh-users/zsh-syntax-highlighting
+[submodule "omz/.local/share/omz-custom/plugins/autoswitch_virtualenv"]
+	path = omz/.local/share/omz-custom/plugins/autoswitch_virtualenv
+	url = https://github.com/MichaelAquilina/zsh-autoswitch-virtualenv

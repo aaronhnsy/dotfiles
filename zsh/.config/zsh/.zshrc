@@ -12,11 +12,11 @@ plugins=(
 	starship
 	sudo
 	ufw
-	autoswitch_virtualenv
+	zsh-autoswitch-virtualenv
 	zsh-autosuggestions
 	zsh-syntax-highlighting
 )
-ZSH_CUSTOM="$XDG_DATA_HOME/omz-plugins"
+ZSH_CUSTOM="$XDG_DATA_HOME/omz-custom"
 ZSH_CACHE_DIR="$XDG_CACHE_HOME/omz"
 
 # oh-my-zsh: update settings
