@@ -32,7 +32,6 @@ DISABLE_AUTO_TITLE="true"
 HIST_STAMPS="%d/%m/%Y"
 HISTFILE="$XDG_STATE_HOME/zsh/history"
 
-
 # iterm2
 zstyle ':omz:plugins:iterm2' shell-integration yes
 
@@ -45,7 +44,7 @@ source $ZSH/oh-my-zsh.sh
 
 # path
 typeset -U path
-path+=("/home/axel/.local/bin")
+path+=("$HOME/.local/bin")
 
 # aliases
 alias ls="ls -lah --color"
@@ -59,6 +58,3 @@ if uname -r | grep -q 'microsoft'; then
 	alias ssh="ssh.exe"
 	alias ssh-add="ssh-add.exe"
 fi
-
-test -e "${ZDOTDIR}/.iterm2_shell_integration.zsh" && source "${ZDOTDIR}/.iterm2_shell_integration.zsh"
-
