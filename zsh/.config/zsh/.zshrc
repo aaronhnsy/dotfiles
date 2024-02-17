@@ -43,9 +43,19 @@ path+=("$HOME/.local/bin")
 # aliases
 alias ls="ls -lah --color"
 
-# wsl 1password support
-if uname -r | grep -q 'microsoft'; then
+# wsl
+if uname -a | grep -q "[-]microsoft"; then
     path+=("/mnt/c/windows/system32/openssh")
     alias ssh="ssh.exe"
     alias ssh-add="ssh-add.exe"
+    export LC_ALL="C.utf8"
 fi
+# general
+if uname -a | grep -q "[-]general"; then
+    export LC_ALL="C.utf8"
+fi
+# macos
+if uname -s | grep -q "Darwin"; then
+    export LC_ALL="en_GB.utf8"
+fi
+
