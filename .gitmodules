@@ -7,3 +7,18 @@
 [submodule "omz/.local/share/omz-custom/plugins/autoswitch_virtualenv"]
 	path = omz/.local/share/omz-custom/plugins/autoswitch_virtualenv
 	url = https://github.com/MichaelAquilina/zsh-autoswitch-virtualenv
+[submodule "zsh/.local/share/oh-my-zsh"]
+	path = zsh/.local/share/oh-my-zsh
+	url = https://github.com/ohmyzsh/ohmyzsh
+[submodule "zsh/.local/share/oh-my-zsh-custom/plugins/zsh-syntax-highlighting"]
+	path = zsh/.local/share/oh-my-zsh-custom/plugins/zsh-syntax-highlighting
+	url = https://github.com/zsh-users/zsh-syntax-highlighting
+[submodule "zsh/.local/share/oh-my-zsh-custom/plugins/zsh-autosuggestions"]
+	path = zsh/.local/share/oh-my-zsh-custom/plugins/zsh-autosuggestions
+	url = https://github.com/zsh-users/zsh-autosuggestions
+[submodule "zsh/.local/share/oh-my-zsh-custom/plugins/autoswitch_virtualenv"]
+	path = zsh/.local/share/oh-my-zsh-custom/plugins/autoswitch_virtualenv
+	url = https://github.com/MichaelAquilina/zsh-autoswitch-virtualenv
+[submodule "nvm/.local/share/nvm"]
+	path = nvm/.local/share/nvm
+	url = https://github.com/nvm-sh/nvm
