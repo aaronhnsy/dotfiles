@@ -51,7 +51,7 @@ if uname -a | grep -q "[-]microsoft"; then
     export LC_ALL="C.utf8"
 fi
 # general
-if uname -a | grep -q "[-]general"; then
+if uname -a | grep -q "[-]generic"; then
     export LC_ALL="C.utf8"
 fi
 # macos
