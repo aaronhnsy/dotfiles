@@ -5,6 +5,7 @@ export ZSH_CACHE_DIR="$XDG_CACHE_HOME/oh-my-zsh"
 plugins=(
 	command-not-found
 	iterm2
+	brew
 	npm
 	nvm
 	pip
@@ -55,7 +56,7 @@ if uname -a | grep -q "[-]generic"; then
     export LC_ALL="C.utf8"
 fi
 # macos
-if uname -s | grep -q "Darwin"; then
-    export LC_ALL="en_GB.utf8"
+if uname -a | grep -q "Darwin"; then
+    export LC_ALL="en_GB.UTF-8"
 fi
 
