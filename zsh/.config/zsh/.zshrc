@@ -1,62 +1,64 @@
-# oh-my-zsh: main settings
+# omz: main settings
 export ZSH="$XDG_DATA_HOME/oh-my-zsh"
-export ZSH_CUSTOM="$XDG_DATA_HOME/oh-my-zsh-custom"
-export ZSH_CACHE_DIR="$XDG_CACHE_HOME/oh-my-zsh"
+ZSH_CUSTOM="$XDG_DATA_HOME/oh-my-zsh-custom"
+ZSH_CACHE_DIR="$XDG_CACHE_HOME/oh-my-zsh"
+
+# omz: plugins
 plugins=(
-	command-not-found
-	iterm2
-	brew
-	npm
-	nvm
-	pip
-	poetry
-	python
-	rust
-	starship
-	sudo
-	ufw
-	autoswitch_virtualenv
-	zsh-autosuggestions
-	zsh-syntax-highlighting
+    # built-in
+    colored-man-pages
+    command-not-found
+    dirhistory
+    fzf
+    pip
+    poetry
+    npm
+    nvm
+    rust
+    starship
+    sudo
+    # custom
+    autoswitch_virtualenv
+    zsh-autosuggestions
+    zsh-syntax-highlighting
 )
 
-# oh-my-zsh: update settings
+# omz: platform specific settings
+if uname -a | grep -q "Darwin"; then
+    export LC_ALL="en_GB.UTF-8"
+    plugins+=(brew iterm2)
+    zstyle :omz:plugins:iterm2 shell-integration yes
+fi
+if uname -a | grep -q "Linux"; then
+    export LC_ALL="C.utf8"
+    plugins+=(ufw)
+fi
+if uname -a | grep -q "[-]microsoft"; then
+    path+=("/mnt/c/program files/openssh")
+    alias ssh="ssh.exe"
+    alias ssh-add="ssh-add.exe"
+fi
+
+# omz: update settings
 zstyle ':omz:update' mode disabled
 
-# oh-my-zsh: completion settings
-COMPLETION_WAITING_DOTS="true"
+# omz: history settings
+HISTFILE="$XDG_STATE_HOME/zsh/history"
+HISTSIZE=9999999
+SAVEHIST=9999999
+HIST_STAMPS="dd.mm.yyyy"
 
-# oh-my-zsh: automatic title
+# omz: misc
+COMPLETION_WAITING_DOTS="true"
 DISABLE_AUTO_TITLE="true"
 
-# oh-my-zsh: library settings
-HIST_STAMPS="%d/%m/%Y"
-HISTFILE="$XDG_STATE_HOME/zsh/history"
-
+# path
+path+=("$HOME/.local/bin")
 
 source $ZSH/oh-my-zsh.sh
 
-
-# path
-typeset -U path
-path+=("$HOME/.local/bin")
-
 # aliases
-alias ls="ls -lah --color"
+alias ls="eza --all --all --long --header --binary --git --dereference --icons"
 
-# wsl
-if uname -a | grep -q "[-]microsoft"; then
-    path+=("/mnt/c/windows/system32/openssh")
-    alias ssh="ssh.exe"
-    alias ssh-add="ssh-add.exe"
-    export LC_ALL="C.utf8"
-fi
-# general
-if uname -a | grep -q "[-]generic"; then
-    export LC_ALL="C.utf8"
-fi
-# macos
-if uname -a | grep -q "Darwin"; then
-    export LC_ALL="en_GB.UTF-8"
-fi
-
+# ensure 'path' and 'PATH' don't have duplicate values
+typeset -U PATH
