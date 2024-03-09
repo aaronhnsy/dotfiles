@@ -1,60 +1,37 @@
-# XDG Base Directories
-export XDG_CONFIG_HOME="$HOME/.config"
-export XDG_CACHE_HOME="$HOME/.cache"
-export XDG_DATA_HOME="$HOME/.local/share"
-export XDG_STATE_HOME="$HOME/.local/state"
-export XDG_RUNTIME_DIR="/run/user/$UID"
+# xdg base dirs
+XDG_CONFIG_HOME="$HOME/.config"
+XDG_CACHE_HOME="$HOME/.cache"
+XDG_DATA_HOME="$HOME/.local/share"
+XDG_STATE_HOME="$HOME/.local/state"
 
-# Rust
-export CARGO_HOME="$XDG_DATA_HOME/cargo"
-export RUSTUP_HOME="$XDG_DATA_HOME/rustup"
+for _dir in "$XDG_CONFIG_HOME" "$XDG_CACHE_HOME" "$XDG_DATA_HOME" "$XDG_STATE_HOME"; do
+    [ -d "$_dir" ] || mkdir -p "$_dir"
+done
 
-# Elixir
-export MIX_XDG="true"
+export XDG_CONFIG_HOME XDG_CACHE_HOME XDG_DATA_HOME XDG_STATE_HOME
 
-# FFmpeg
+# xdg_config_home
+export STARSHIP_CONFIG="$XDG_CONFIG_HOME/starship/starship.toml"
+export WGETRC="$XDG_CONFIG_HOME/wget/wgetrc"
+export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
 export FFMPEG_DATADIR="$XDG_CONFIG_HOME/ffmpeg"
 
-# Go
-export GOPATH="$XDG_DATA_HOME/go"
-export GOMODCACHE="$XDG_CACHE_HOME/go/mod"
-
-# Gradle
-export GRADLE_USER_HOME="$XDG_DATA_HOME/gradle"
-
-# Node.js
-export NODE_REPL_HISTORY="$XDG_STATE_HOME/node/history"
-
-# npm
-export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
+# xdg_cache_home
+export STARSHIP_CACHE="$XDG_CACHE_HOME/starship"
 export NPM_CONFIG_CACHE="$XDG_CACHE_HOME/npm"
-
-# nuget
 export NUGET_PACKAGES="$XDG_CACHE_HOME/nuget"
 
-# nvm
-export NVM_DIR="$XDG_DATA_HOME/nvm"
-
-# PostgreSQL
-export PSQL_HISTORY="$XDG_STATE_HOME/psql/history"
-
-# pyenv
+# xdg_data_home
 export PYENV_ROOT="$XDG_DATA_HOME/pyenv"
+export NVM_DIR="$XDG_DATA_HOME/nvm"
+export RUSTUP_HOME="$XDG_DATA_HOME/rustup"
+export CARGO_HOME="$XDG_DATA_HOME/cargo"
+export DOTNET_CLI_HOME="$XDG_DATA_HOME/dotnet"
 
-# starship
-export STARSHIP_CONFIG="$XDG_CONFIG_HOME/starship/starship.toml"
-export STARSHIP_CACHE="$XDG_CACHE_HOME/starship"
-
-# wakatime
-export WAKATIME_HOME="$XDG_CONFIG_HOME/wakatime"
-export WAKATIME_CLI_LOCATION="$XDG_DATA_HOME/wakatime"
-
-# wget
-export WGETRC="$XDG_CONFIG_HOME/wget/wgetrc"
-
-# less
+# xdg_state_home
+export NODE_REPL_HISTORY="$XDG_STATE_HOME/node/history"
+export PSQL_HISTORY="$XDG_STATE_HOME/psql/history"
 export LESSHISTFILE="$XDG_STATE_HOME/less/history"
 
-# zsh
-export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
-
+# misc
+export MIX_XDG="true"
