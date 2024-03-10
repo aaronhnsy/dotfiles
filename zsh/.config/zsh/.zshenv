@@ -31,7 +31,7 @@ export DOTNET_CLI_HOME="$XDG_DATA_HOME/dotnet"
 # xdg_state_home
 export NODE_REPL_HISTORY="$XDG_STATE_HOME/node/history"
 export PSQL_HISTORY="$XDG_STATE_HOME/psql/history"
-export REDIS_CLI_HISTFILE="$XDG_STATE_HOME/redis/history"
+export REDISCLI_HISTFILE="$XDG_STATE_HOME/redis/history"
 export LESSHISTFILE="$XDG_STATE_HOME/less/history"
 
 # misc
