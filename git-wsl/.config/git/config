@@ -1,13 +1,15 @@
+[advice]
+    detachedHead = false
 [core]
-	autocrlf = false
-	sshCommand = "ssh.exe"
+    autocrlf = false
+    sshCommand = "ssh.exe"
 [user]
-	name = aaronhnsy
-	email = aaronhnsy@gmail.com
-	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIORpqKLvhkf3dPs0PGKvlycAypXY5oRmRrtFsoLN2+tc
+    name = aaronhnsy
+    email = aaronhnsy@gmail.com
+    signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIORpqKLvhkf3dPs0PGKvlycAypXY5oRmRrtFsoLN2+tc
 [commit]
-	gpgsign = true
+    gpgsign = true
 [gpg]
-	format = ssh
+    format = ssh
 [gpg "ssh"]
-	program = "/mnt/c/Program Files/1Password/app/8/op-ssh-sign-wsl"
+    program = "/mnt/c/Program Files/1Password/app/8/op-ssh-sign-wsl"

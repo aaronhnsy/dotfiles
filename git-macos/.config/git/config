@@ -1,12 +1,14 @@
+[advice]
+    detachedHead = false
 [core]
-	autocrlf = false
+    autocrlf = false
 [user]
-	name = aaronhnsy
-	email = aaronhnsy@gmail.com
-	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEpC2eBkWypBqexCQZfVApjEMr8n8SaWclA/aQz4kliu
+    name = aaronhnsy
+    email = aaronhnsy@gmail.com
+    signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEpC2eBkWypBqexCQZfVApjEMr8n8SaWclA/aQz4kliu
 [commit]
-	gpgsign = true
+    gpgsign = true
 [gpg]
-	format = ssh
+    format = ssh
 [gpg "ssh"]
-	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
+    program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
