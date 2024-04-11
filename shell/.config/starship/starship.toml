@@ -1,14 +1,19 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
 format = """
-[](bg: #078d70)\
-$username$hostname\
-[](fg:#078d70 bg:#26ceaa)\
+[](fg:colour_info)\
+$os\
+$username\
+$hostname\
+[](fg:colour_info bg:colour_directory)\
 $directory\
-[](fg:#26ceaa bg:#99e8c2)\
-$git_branch$git_commit$git_state$git_status\
-[ ](bg:#99e8c2)\
-[](fg:#99e8c2 bg:#7bade3)\
+[](fg:colour_directory bg:colour_git)\
+$git_branch\
+$git_commit\
+$git_state\
+$git_status\
+[ ](bg:colour_git)\
+[](fg:colour_git bg:colour_tools)\
 $c\
 $cmake\
 $dart\
@@ -27,132 +32,171 @@ $ruby\
 $rust\
 $swift\
 $package\
-[ ](bg:#7bade3)\
-[](fg:#7bade3 bg:#5049cb)\
+[ ](bg:colour_tools)\
+[](fg:colour_tools bg:colour_command_duration)\
 $cmd_duration\
-[ ](bg:#5049cb)\
-[](fg:#5049cb bg:#3e1a78)\
+[ ](bg:colour_command_duration)\
+[](fg:colour_command_duration bg:colour_time)\
 $time\
-[](fg:#3e1a78)
-$character
+[ ](fg:colour_time)\
+$line_break\
+$character\
 """
 
+palette = "custom"
+
+[palettes.custom]
+colour_fg0 = "#fbf1c7"
+colour_time = "#3c3836"
+colour_command_duration = "#665c54"
+colour_tools = "#458588"
+colour_git = "#689d6a"
+colour_info = "#d65d0e"
+colour_directory = "#d79921"
+colour_success = "#98971a"
+colour_error = "#cc241d"
+
+[os]
+style = "bg:colour_info fg:colour_fg0"
+disabled = false
+
+[os.symbols]
+Windows = "󰍲"
+Ubuntu = "󰕈"
+SUSE = ""
+Raspbian = "󰐿"
+Mint = "󰣭"
+Macos = "󰀵"
+Manjaro = ""
+Linux = "󰌽"
+Gentoo = "󰣨"
+Fedora = "󰣛"
+Alpine = ""
+Amazon = ""
+Android = ""
+Arch = "󰣇"
+Artix = "󰣇"
+CentOS = ""
+Debian = "󰣚"
+Redhat = "󱄛"
+RedHatEnterprise = "󱄛"
+
 [username]
-style_user = "bg:#078d70 fg:#000000"
-style_root = "bg:#078d70 fg:#000000"
+style_user = "bg:colour_info fg:colour_fg0"
+style_root = "bg:colour_info fg:colour_fg0"
+format = "[ $user ]($style)"
 show_always = true
-format = "[$user ]($style)"
 
 [hostname]
-style = "bg:#078d70 fg:#000000"
+style =  "bg:colour_info fg:colour_fg0"
 format = "[\uf178  ssh: $hostname ]($style)"
 
 [directory]
-truncation_symbol = "…/"
-truncation_length = 5
-style = "bg:#26ceaa fg:#000000"
+style = "bg:colour_directory fg:colour_fg0"
 format = "[ $path ]($style)"
+truncation_length = 5
+truncation_symbol = "…/"
 
 [git_branch]
 symbol = ""
-style = "bg:#99e8c2 fg:#000000"
+style = "bg:colour_git"
 format = "[ $symbol $branch(:$remote_branch)]($style)"
 
 [git_commit]
 tag_symbol = " "
-style = "bg:#99e8c2 fg:#000000"
+style = "bg:colour_git"
 format = "[ \\($hash$tag\\)]($style)"
 
 [git_state]
-style = "bg:#99e8c2 fg:#000000"
+style = "bg:colour_git"
 format = "[$state ($progress_current/$progress_total)]($style)"
 
 [git_status]
-style = "bg:#99e8c2 fg:#000000"
+style = "bg:colour_git"
 format = "[($all_status$ahead_behind)]($style)"
 
 [c]
-style = "bg:#7bade3 fg:#000000"
+style = "bg:colour_tools"
 format = "[ $symbol($version(-$name))]($style)"
 
 [cmake]
-style = "bg:#7bade3 fg:#000000"
+style = "bg:colour_tools"
 format = "[ $symbol($version)]($style)"
 
 [dart]
-style = "bg:#7bade3 fg:#000000"
+style = "bg:colour_tools"
 format = "[ $symbol($version)]($style)"
 
 [deno]
-style = "bg:#7bade3 fg:#000000"
+style = "bg:colour_tools"
 format = "[ $symbol($version)]($style)"
 
 [dotnet]
-style = "bg:#7bade3 fg:#000000"
+style = "bg:colour_tools"
 format = "[ $symbol($version)( 🎯$tfm)]($style)"
 
 [elixir]
-style = "bg:#7bade3 fg:#000000"
+style = "bg:colour_tools"
 format = "[ $symbol($version \\(OTP $otp_version\\))]($style)"
 
 [erlang]
-style = "bg:#7bade3 fg:#000000"
+style = "bg:colour_tools"
 format = "[ $symbol($version)]($style)"
 
 [golang]
-style = "bg:#7bade3 fg:#000000"
+style = "bg:colour_tools"
 format = "[ $symbol($version)]($style)"
 
 [haskell]
-style = "bg:#7bade3 fg:#000000"
+style = "bg:colour_tools"
 format = "[ $symbol($version)]($style)"
 
 [java]
-style = "bg:#7bade3 fg:#000000"
+style = "bg:colour_tools"
 format = "[ $symbol($version)]($style)"
 
 [kotlin]
-style = "bg:#7bade3 fg:#000000"
+style = "bg:colour_tools"
 format = "[ $symbol($version)]($style)"
 
 [lua]
-style = "bg:#7bade3 fg:#000000"
+style = "bg:colour_tools"
 format = "[ $symbol($version)]($style)"
 
 [nodejs]
-style = "bg:#7bade3 fg:#000000"
+style = "bg:colour_tools"
 format = "[ $symbol($version)]($style)"
 
 [python]
-style = "bg:#7bade3 fg:#000000"
+style = "bg:colour_tools"
 format = "[ ${symbol}${pyenv_prefix}(${version} )(\\($virtualenv\\))]($style)"
 
 [ruby]
-style = "bg:#7bade3 fg:#000000"
+style = "bg:colour_tools"
 format = "[ $symbol($version)]($style)"
 
 [rust]
-style = "bg:#7bade3 fg:#000000"
+style = "bg:colour_tools"
 format = "[ $symbol($version)]($style)"
 
 [swift]
-style = "bg:#7bade3 fg:#000000"
+style = "bg:colour_tools"
 format = "[ $symbol($version)]($style)"
 
 [package]
-style = "bg:#7bade3 fg:#000000"
+style = "bg:colour_tools"
 format = "[ $symbol($version)]($style)"
 
 [cmd_duration]
-style = "bg:#5049cb fg:#000000"
+style = "bg:colour_command_duration"
 format = "[ $duration]($style)"
 
 [time]
 disabled = false
 time_format = "%R"
-style = "bg:#3e1a78 fg:#000000"
+style = "bg:colour_time"
 format = '[ ♥ $time ]($style)'
 
 [character]
-success_symbol = " [\uf178](fg:#078d70)"
-error_symbol = " [✘](bold red)"
+success_symbol = '[](bold fg:colour_success)'
+error_symbol = '[](bold fg:colour_error)'
