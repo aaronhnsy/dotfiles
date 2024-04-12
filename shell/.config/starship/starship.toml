@@ -53,7 +53,7 @@ colour_tools = "#458588"
 colour_git = "#689d6a"
 colour_info = "#d65d0e"
 colour_directory = "#d79921"
-colour_success = "#98971a"
+colour_success = "#689d6a"
 colour_error = "#cc241d"
 
 [os]
@@ -89,11 +89,13 @@ show_always = true
 
 [hostname]
 style =  "bg:colour_info fg:colour_fg0"
-format = "[\uf178  ssh: $hostname ]($style)"
+format = "[ ssh: $hostname ]($style)"
 
 [directory]
+read_only_style = "bg:colour_directory fg:colour_fg0"
+read_only = " "
 style = "bg:colour_directory fg:colour_fg0"
-format = "[ $path ]($style)"
+format = "[$read_only]($read_only_style)[ $path ]($style)"
 truncation_length = 5
 truncation_symbol = "…/"
 
@@ -195,8 +197,8 @@ format = "[ $duration]($style)"
 disabled = false
 time_format = "%R"
 style = "bg:colour_time"
-format = '[ ♥ $time ]($style)'
+format = '[  $time ]($style)'
 
 [character]
-success_symbol = '[](bold fg:colour_success)'
-error_symbol = '[](bold fg:colour_error)'
+success_symbol = '[ ](bold fg:colour_success)'
+error_symbol = '[ ](bold fg:colour_error)'
