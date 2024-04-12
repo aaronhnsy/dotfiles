@@ -63,7 +63,7 @@ disabled = false
 
 [os.symbols]
 Windows = "󰍲"
-Ubuntu = "󰕈"
+Ubuntu = ""
 SUSE = ""
 Raspbian = "󰐿"
 Mint = "󰣭"
