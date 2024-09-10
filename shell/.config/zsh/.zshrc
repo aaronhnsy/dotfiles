@@ -60,5 +60,8 @@ source $ZSH/oh-my-zsh.sh
 # aliases
 alias ls="eza --all --all --long --header --binary --git --dereference --icons"
 
+# misc
+EDITOR="nano"
+
 # ensure 'path' and 'PATH' don't have duplicate values
 typeset -U PATH
