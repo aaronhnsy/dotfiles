@@ -1,7 +1,2 @@
-[advice]
-    detachedHead = false
-[core]
-    autocrlf = false
-[user]
-    name = aaronhnsy
-    email = aaronhnsy@gmail.com
+[include]
+    path = "common.config"

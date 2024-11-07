@@ -1,14 +1,10 @@
-[advice]
-    detachedHead = false
-[core]
-    autocrlf = false
+[include]
+    path = "common.config"
 [user]
-    name = aaronhnsy
-    email = aaronhnsy@gmail.com
     signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEpC2eBkWypBqexCQZfVApjEMr8n8SaWclA/aQz4kliu
 [commit]
     gpgsign = true
 [gpg]
     format = ssh
 [gpg "ssh"]
-    program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
+    program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"

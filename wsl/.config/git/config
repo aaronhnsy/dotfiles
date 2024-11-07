@@ -1,11 +1,8 @@
-[advice]
-    detachedHead = false
+[include]
+    path = "common.config"
 [core]
-    autocrlf = false
     sshCommand = "ssh.exe"
 [user]
-    name = aaronhnsy
-    email = aaronhnsy@gmail.com
     signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIORpqKLvhkf3dPs0PGKvlycAypXY5oRmRrtFsoLN2+tc
 [commit]
     gpgsign = true
