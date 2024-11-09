@@ -1,0 +1,1 @@
+source "$ZDOTDIR/variables.sh"

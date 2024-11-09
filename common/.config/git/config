@@ -1,2 +1,2 @@
 [include]
-    path = "common.config"
+    path = "common-config"

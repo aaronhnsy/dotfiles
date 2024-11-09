@@ -1,18 +1,21 @@
-[submodule "shell/.local/share/oh-my-zsh"]
-	path = shell/.local/share/oh-my-zsh
-	url = https://github.com/ohmyzsh/ohmyzsh
-[submodule "shell/.local/share/oh-my-zsh-custom/plugins/zsh-autosuggestions"]
-	path = shell/.local/share/oh-my-zsh-custom/plugins/zsh-autosuggestions
-	url = https://github.com/zsh-users/zsh-autosuggestions
-[submodule "shell/.local/share/oh-my-zsh-custom/plugins/zsh-syntax-highlighting"]
-	path = shell/.local/share/oh-my-zsh-custom/plugins/zsh-syntax-highlighting
-	url = https://github.com/zsh-users/zsh-syntax-highlighting
-[submodule "shell/.local/share/oh-my-zsh-custom/plugins/autoswitch_virtualenv"]
-	path = shell/.local/share/oh-my-zsh-custom/plugins/autoswitch_virtualenv
-	url = https://github.com/MichaelAquilina/zsh-autoswitch-virtualenv
-[submodule "tools/.local/share/pyenv"]
-	path = tools/.local/share/pyenv
-	url = https://github.com/pyenv/pyenv
-[submodule "tools/.local/share/nvm"]
-	path = tools/.local/share/nvm
+[submodule "main/.local/share/nvm"]
+	path = main/.local/share/nvm
 	url = https://github.com/nvm-sh/nvm
+[submodule "main/.local/share/pyenv"]
+	path = main/.local/share/pyenv
+	url = https://github.com/pyenv/pyenv
+[submodule "main/.local/share/oh-my-zsh"]
+	path = main/.local/share/oh-my-zsh
+	url = https://github.com/ohmyzsh/ohmyzsh
+[submodule "main/.local/share/oh-my-zsh-custom/plugins/zsh-autosuggestions"]
+	path = main/.local/share/oh-my-zsh-custom/plugins/zsh-autosuggestions
+	url = https://github.com/zsh-users/zsh-autosuggestions
+[submodule "main/.local/share/oh-my-zsh-custom/plugins/zsh-syntax-highlighting"]
+	path = main/.local/share/oh-my-zsh-custom/plugins/zsh-syntax-highlighting
+	url = https://github.com/zsh-users/zsh-syntax-highlighting
+[submodule "main/.local/share/oh-my-zsh-custom/plugins/zsh-completions"]
+	path = main/.local/share/oh-my-zsh-custom/plugins/zsh-completions
+	url = https://github.com/zsh-users/zsh-completions
+[submodule "main/.local/share/oh-my-zsh-custom/plugins/autoswitch_virtualenv"]
+	path = main/.local/share/oh-my-zsh-custom/plugins/autoswitch_virtualenv
+	url = https://github.com/MichaelAquilina/zsh-autoswitch-virtualenv
