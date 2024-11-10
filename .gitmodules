@@ -19,3 +19,6 @@
 [submodule "main/.local/share/oh-my-zsh-custom/plugins/autoswitch_virtualenv"]
 	path = main/.local/share/oh-my-zsh-custom/plugins/autoswitch_virtualenv
 	url = https://github.com/MichaelAquilina/zsh-autoswitch-virtualenv
+[submodule "main/.config/nano/nano-syntax-highlighting"]
+	path = main/.config/nano/nano-syntax-highlighting
+	url = https://github.com/galenguyer/nano-syntax-highlighting

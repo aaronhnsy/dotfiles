@@ -1,0 +1,5 @@
+set autoindent
+set nonewlines
+set mouse
+
+include ~/.config/nano/nano-syntax-highlighting/*.nanorc
