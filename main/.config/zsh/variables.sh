@@ -24,6 +24,8 @@ export NVM_DIR="$XDG_DATA_HOME/nvm"
 export RUSTUP_HOME="$XDG_DATA_HOME/rustup"
 export CARGO_HOME="$XDG_DATA_HOME/cargo"
 export DOTNET_CLI_HOME="$XDG_DATA_HOME/dotnet"
+export GRADLE_USER_HOME="$XDG_DATA_HOME/gradle"
+export GRADLE_HOME="$GRADLE_USER_HOME"
 
 # xdg state home
 export PYTHON_HISTORY="$XDG_STATE_HOME/python/history"
