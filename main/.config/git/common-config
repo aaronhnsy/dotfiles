@@ -2,6 +2,7 @@
     detachedHead = false
 [core]
     autocrlf = false
+    ignorecase = false
 [user]
     name = aaronhnsy
     email = aaronhnsy@gmail.com
