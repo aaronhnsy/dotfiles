@@ -2,6 +2,7 @@ export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_CACHE_HOME="$HOME/.cache"
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_STATE_HOME="$HOME/.local/state"
+export XDG_RUNTIME_DIR="/run/user/$(id -u)}"
 
 # xdg config home
 export STARSHIP_CONFIG="$XDG_CONFIG_HOME/starship/starship.toml"
@@ -19,7 +20,6 @@ export NPM_CONFIG_CACHE="$XDG_CACHE_HOME/npm"
 export NUGET_PACKAGES="$XDG_CACHE_HOME/nuget"
 
 # xdg data home
-export PYENV_ROOT="$XDG_DATA_HOME/pyenv"
 export NVM_DIR="$XDG_DATA_HOME/nvm"
 export RUSTUP_HOME="$XDG_DATA_HOME/rustup"
 export CARGO_HOME="$XDG_DATA_HOME/cargo"
