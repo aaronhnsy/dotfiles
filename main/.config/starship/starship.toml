@@ -1,205 +1,253 @@
 "$schema" = "https://starship.rs/config-schema.json"
 
 format = """
-[](fg:colour_info)\
+[](fg:red)\
 $os\
 $hostname\
 $username\
-[](fg:colour_info bg:colour_directory)\
+$sudo\
+
+[](fg:red bg:peach)\
 $directory\
-[](fg:colour_directory bg:colour_git)\
+
+[](fg:peach bg:yellow)\
 $git_branch\
 $git_commit\
 $git_state\
 $git_status\
-[ ](bg:colour_git)\
-[](fg:colour_git bg:colour_tools)\
-$c\
-$cmake\
-$dart\
-$deno\
-$dotnet\
-$elixir\
-$erlang\
-$golang\
-$haskell\
+[ ](bg:yellow)\
+
+[](fg:yellow bg:green)\
+$python\
+$nodejs\
 $java\
 $kotlin\
-$lua\
-$nodejs\
-$python\
-$ruby\
+$gradle\
 $rust\
 $swift\
 $package\
-[ ](bg:colour_tools)\
-[](fg:colour_tools bg:colour_command_duration)\
+[ ](bg:green)\
+
+[](fg:green bg:sapphire)\
 $cmd_duration\
-[ ](bg:colour_command_duration)\
-[](fg:colour_command_duration bg:colour_time)\
+[ ](bg:sapphire)\
+
+[](fg:sapphire bg:lavender)\
 $time\
-[](fg:colour_time)\
+
+[ ](fg:lavender)\
 $line_break\
 $character\
 """
 
-palette = "custom"
+continuation_prompt = '▶▶ '
 
-[palettes.custom]
-colour_text = "#fbf1c7"
-colour_time = "#3c3836"
-colour_command_duration = "#665c54"
-colour_tools = "#458588"
-colour_git = "#689d6a"
-colour_info = "#d65d0e"
-colour_directory = "#d79921"
-colour_success = "#689d6a"
-colour_error = "#cc241d"
+palette = "catppuccin"
+
+[palettes.catppuccin]
+rosewater = "#f4dbd6"
+flamingo  = "#f0c6c6"
+pink      = "#f5bde6"
+mauve     = "#c6a0f6"
+red       = "#ed8796"
+maroon    = "#ee99a0"
+peach     = "#f5a97f"
+yellow    = "#eed49f"
+green     = "#a6da95"
+teal      = "#8bd5ca"
+sky       = "#91d7e3"
+sapphire  = "#7dc4e4"
+blue      = "#8aadf4"
+lavender  = "#b7bdf8"
+text      = "#cad3f5"
+subtext1  = "#b8c0e0"
+subtext0  = "#a5adcb"
+overlay2  = "#939ab7"
+overlay1  = "#8087a2"
+overlay0  = "#6e738d"
+surface2  = "#5b6078"
+surface1  = "#494d64"
+surface0  = "#363a4f"
+base      = "#24273a"
+mantle    = "#1e2030"
+crust     = "#181926"
+
 
 [os]
-style = "bg:colour_info fg:colour_text"
-format = "[$symbol ]($style)"
 disabled = false
+style    = "bg:red fg:crust"
+format   = "[$symbol ]($style)"
 
 [os.symbols]
-Windows = "󰍲"
-Ubuntu = ""
-SUSE = ""
-Raspbian = "󰐿"
-Mint = "󰣭"
-Macos = "󰀵"
-Manjaro = ""
-Linux = "󰌽"
-Gentoo = "󰣨"
-Fedora = "󰣛"
-Alpine = ""
-Amazon = ""
-Android = ""
-Arch = "󰣇"
-Artix = "󰣇"
-CentOS = ""
-Debian = "󰣚"
-Redhat = "󱄛"
+Windows          = ""
+Ubuntu           = "󰕈"
+SUSE             = ""
+Raspbian         = "󰐿"
+Mint             = "󰣭"
+Macos            = "󰀵"
+Manjaro          = ""
+Linux            = "󰌽"
+Gentoo           = "󰣨"
+Fedora           = "󰣛"
+Alpine           = ""
+Amazon           = ""
+Android          = ""
+Arch             = "󰣇"
+Artix            = "󰣇"
+CentOS           = ""
+Debian           = "󰣚"
+Redhat           = "󱄛"
 RedHatEnterprise = "󱄛"
 
 [hostname]
-style =  "bg:colour_info fg:colour_text"
-format = "[$hostname: ]($style)"
+disabled = false
+style    = "bg:red fg:crust"
+format   = "[$hostname: ]($style)"
 
 [username]
-style_user = "bg:colour_info fg:colour_text"
-style_root = "bg:colour_info fg:colour_text"
-format = "[$user ]($style)"
+disabled    = false
 show_always = true
+style_user  = "bg:red fg:crust"
+style_root  = "bg:red fg:crust"
+format      = "[$user ]($style)"
+
+[sudo]
+disabled = false
+symbol   = ""
+style    = "bg:red fg:crust"
+format   = "[$symbol ]($style)"
+
 
 [directory]
-read_only_style = "bg:colour_directory fg:colour_text"
-read_only = " "
-style = "bg:colour_directory fg:colour_text"
-format = "[$read_only]($read_only_style)[ $path ]($style)"
+disabled          = false
 truncation_length = 5
 truncation_symbol = "…/"
+read_only_style   = "bg:peach fg:crust"
+read_only         = ""
+style             = "bg:peach fg:crust"
+format            = "([ $read_only]($read_only_style))[ $path ]($style)"
+
 
 [git_branch]
-symbol = ""
-style = "bg:colour_git"
-format = "[ $symbol $branch(:$remote_branch)]($style)"
+disabled = false
+symbol   = ""
+style    = "bg:yellow fg:crust"
+format   = "[ $symbol $branch(:$remote_branch)]($style)"
 
 [git_commit]
-tag_symbol = " "
-style = "bg:colour_git"
-format = "[ \\($hash$tag\\)]($style)"
+disabled     = false
+tag_disabled = false
+tag_symbol   = " "
+style        = "bg:yellow fg:crust"
+format       = "[ \\($hash( $tag)\\)]($style)"
 
 [git_state]
-style = "bg:colour_git"
-format = "[$state ($progress_current/$progress_total)]($style)"
+disabled = false
+style    = "bg:yellow fg:crust"
+format   = "[ $state($progress_current/$progress_total)]($style)"
 
 [git_status]
-style = "bg:colour_git"
-format = "[($all_status$ahead_behind)]($style)"
+disabled    = false
 
-[c]
-style = "bg:colour_tools"
-format = "[ $symbol($version(-$name))]($style)"
+ahead       = "$count"
+behind      = "$count"
+diverged    = "$ahead_count $behind_count"
+up_to_date  = ""
+conflicted  = "$count"
+stashed     = "󰢰$count"
+untracked   = "?$count"
+modified    = "!$count"
+staged      = "$count"
+renamed     = "$count"
+deleted     = "$count"
+typechanged = ""
 
-[cmake]
-style = "bg:colour_tools"
-format = "[ $symbol($version)]($style)"
+style       = "bg:yellow fg:crust"
+format      = """
+[\
+( $ahead_behind)\
+( $conflicted)\
+( $stashed)\
+( $untracked)\
+( $modified)\
+( $staged)\
+( $renamed)\
+( $deleted)\
+]($style)\
+"""
 
-[dart]
-style = "bg:colour_tools"
-format = "[ $symbol($version)]($style)"
-
-[deno]
-style = "bg:colour_tools"
-format = "[ $symbol($version)]($style)"
-
-[dotnet]
-style = "bg:colour_tools"
-format = "[ $symbol($version)( 🎯$tfm)]($style)"
-
-[elixir]
-style = "bg:colour_tools"
-format = "[ $symbol($version \\(OTP $otp_version\\))]($style)"
-
-[erlang]
-style = "bg:colour_tools"
-format = "[ $symbol($version)]($style)"
-
-[golang]
-style = "bg:colour_tools"
-format = "[ $symbol($version)]($style)"
-
-[haskell]
-style = "bg:colour_tools"
-format = "[ $symbol($version)]($style)"
-
-[java]
-style = "bg:colour_tools"
-format = "[ $symbol($version)]($style)"
-
-[kotlin]
-style = "bg:colour_tools"
-format = "[ $symbol($version)]($style)"
-
-[lua]
-style = "bg:colour_tools"
-format = "[ $symbol($version)]($style)"
-
-[nodejs]
-style = "bg:colour_tools"
-format = "[ $symbol($version)]($style)"
 
 [python]
-style = "bg:colour_tools"
-format = "[ ${symbol}${pyenv_prefix}(${version} )(\\($virtualenv\\))]($style)"
+disabled = false
+symbol   = "󰌠"
+style    = "bg:green fg:crust"
+format   = "[ $symbol( $version)( \\($virtualenv\\))]($style)"
 
-[ruby]
-style = "bg:colour_tools"
-format = "[ $symbol($version)]($style)"
+[nodejs]
+disabled = false
+symbol   = ""
+style    = "bg:green fg:crust"
+format   = "[ $symbol( $version)]($style)"
+
+[java]
+disabled = false
+symbol   = ""
+style    = "bg:green fg:crust"
+format   = "[ $symbol( $version)]($style)"
+
+[kotlin]
+disabled = false
+symbol   = "󱈙"
+style    = "bg:green fg:crust"
+format   = "[ $symbol( $version)]($style)"
+
+[gradle]
+disabled = false
+symbol   = "󰫴"
+style    = "bg:green fg:crust"
+format   = "[ $symbol( $version)]($style)"
 
 [rust]
-style = "bg:colour_tools"
-format = "[ $symbol($version)]($style)"
+disabled = false
+symbol   = "󱘗"
+style    = "bg:green fg:crust"
+format   = "[ $symbol( $version)]($style)"
 
 [swift]
-style = "bg:colour_tools"
-format = "[ $symbol($version)]($style)"
+disabled = false
+symbol   = "󰛥"
+style    = "bg:green fg:crust"
+format   = "[ $symbol( $version)]($style)"
 
 [package]
-style = "bg:colour_tools"
-format = "[ $symbol($version)]($style)"
+disabled = false
+symbol   = ""
+style    = "bg:green fg:crust"
+format   = "[ $symbol $version]($style)"
+
 
 [cmd_duration]
-style = "bg:colour_command_duration"
-format = "[ $duration]($style)"
+disabled           = false
+show_milliseconds  = true
+min_time           = 2_000
+show_notifications = true
+min_time_to_notify = 45_000
+style              = "bg:sapphire fg:crust"
+format             = "[ $duration]($style)"
+
 
 [time]
-disabled = false
+disabled    = false
 time_format = "%R"
-style = "bg:colour_time"
-format = '[  $time]($style)'
+style       = "bg:lavender fg:crust"
+format      = "[  $time]($style)"
+
+
+[line_break]
+disabled = false
+
 
 [character]
-success_symbol = '[ ](bold fg:colour_success)'
-error_symbol = '[ ](bold fg:colour_error)'
+disabled       = false
+success_symbol = "[ ](bold fg:green)"
+error_symbol   = "[ ](bold fg:red)"
