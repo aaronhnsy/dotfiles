@@ -1,3 +1,6 @@
 [submodule "main/.config/nano/nano-syntax-highlighting"]
 	path = main/.config/nano/nano-syntax-highlighting
 	url = https://github.com/galenguyer/nano-syntax-highlighting
+[submodule "main/.config/tmux/plugins/catppuccin"]
+	path = main/.config/tmux/plugins/catppuccin
+	url = https://github.com/catppuccin/tmux
