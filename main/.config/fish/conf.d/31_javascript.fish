@@ -2,7 +2,7 @@
 if test (uname) = Darwin
     fnm env --use-on-cd --shell fish | source
 else
-    set -gx FNM_DIR "$XDG_DATA_HOME/fnm"
+    fish_add_path -g "$XDG_DATA_HOME/fmn"
     $FNM_DIR/fnm env --use-on-cd --shell fish | source
 end
 
