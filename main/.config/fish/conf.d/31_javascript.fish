@@ -1,6 +1,6 @@
 # add fnm dir to path on not-macos
 if test (uname) != Darwin
-    fish_add_path -g "$XDG_DATA_HOME/fmn"
+    fish_add_path -g "$XDG_DATA_HOME/fnm"
 end
 
 # load fnm environment variables
