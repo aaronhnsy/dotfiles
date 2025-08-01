@@ -1,5 +1,10 @@
 # load fnm environment variables
-fnm env --use-on-cd --shell fish | source
+if test (uname) = Darwin
+    fnm env --use-on-cd --shell fish | source
+else
+    set -gx FNM_DIR "$XDG_DATA_HOME/fnm"
+    $FNM_DIR/fnm env --use-on-cd --shell fish | source
+end
 
 # set node repl history file location
 set -gx NODE_REPL_HISTORY "$XDG_STATE_HOME/node/history"
