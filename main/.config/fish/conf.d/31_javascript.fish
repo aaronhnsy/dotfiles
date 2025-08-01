@@ -1,10 +1,10 @@
-# load fnm environment variables
-if test (uname) = Darwin
-    fnm env --use-on-cd --shell fish | source
-else
+# add fnm dir to path on not-macos
+if test (uname) != Darwin
     fish_add_path -g "$XDG_DATA_HOME/fmn"
-    $FNM_DIR/fnm env --use-on-cd --shell fish | source
-end
+else
+
+# load fnm environment variables
+fnm env --use-on-cd --shell fish | source
 
 # set node repl history file location
 set -gx NODE_REPL_HISTORY "$XDG_STATE_HOME/node/history"
