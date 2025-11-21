@@ -3,3 +3,6 @@ set -gx SSH_AUTH_SOCK "$HOME/Library/Group Containers/2BUA8C4S2C.com.1password/t
 
 # add jetbrains toolbox scripts to path
 fish_add_path -g "$HOME/Library/Application Support/JetBrains/Toolbox/scripts"
+
+# add psql to path
+fish_add_path -g "/opt/homebrew/opt/postgresql@18/bin"
