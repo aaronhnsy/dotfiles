@@ -1,2 +1,2 @@
-# disable greeting
+# disable fish greeting
 set -g fish_greeting

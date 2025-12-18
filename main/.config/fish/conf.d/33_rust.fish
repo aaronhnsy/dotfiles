@@ -1,8 +1,8 @@
-# set rustup data directory
+# set rustup data directory location
 set -gx RUSTUP_HOME "$XDG_DATA_HOME/rustup"
 
-# set cargo data directory
+# set cargo data directory location
 set -gx CARGO_HOME "$XDG_DATA_HOME/cargo"
 
-# source cargo environment variables
-source "$CARGO_HOME/env.fish"
+# add cargo bin directory to PATH
+fish_add_path -g "$CARGO_HOME/bin"
