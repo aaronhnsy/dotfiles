@@ -7,3 +7,6 @@ test -d "$_wget_hsts_dir" || mkdir -p "$_wget_hsts_dir"
 
 # alias (wget -> wget) to use custom hsts file location
 alias wget "wget --hsts-file=$_wget_hsts_dir/hsts"
+
+# alias (cat -> bat) for better file viewing
+alias cat "bat --no-paging"
