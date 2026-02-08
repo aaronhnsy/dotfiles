@@ -1,0 +1,101 @@
+@theme "theme.rasi"
+
+configuration {
+    threads:       0;
+    display:       "$DISPLAY";
+    markup:        true;
+    replace:       true;
+    click-to-exit: true;
+    global-kb:     true;
+
+    matching:       ["normal", "fuzzy"];
+    tokenize:       false;
+    case-sensitive: false;
+    case-smart:     true;
+
+    sort:           true;
+    sorting-method: "levenshtein";
+
+    scroll-method: 0;
+
+    disable-history: false;
+    max-history-size: 25;
+    entry  {
+        max-history: 30;
+    }
+
+    show-icons: true;
+    icon-theme: "Papirus";
+
+	modes: ["drun", "run", "ssh", "window", "keys", "filebrowser", "recursivebrowser", "combi"];
+
+    display-window:      " Windows";
+    window-format:       "{c:-1}: {t}";
+    window-match-fields: ["title", "class"];
+    window-command:      "wmctrl -i -R {window}";
+    window-thumbnail:    true;
+    window {
+        close-on-delete:    false;
+        hide-active-window: true;
+        prefer-icon-theme:  true;
+    }
+
+    display-run:       " Commands";
+    terminal:          "rofi-sensible-terminal";
+    run-command:       "{cmd}";
+    run-shell-command: "{terminal} -e {cmd}";
+    // run-list-command:  "";
+    run {
+        fallback-icon: "terminal";
+    }
+
+    display-ssh:       " Servers";
+    ssh-client:        "ssh";
+    ssh-command:       "{terminal} -e {ssh-client} {host} [-p {port}]";
+    parse-hosts:       false;
+    parse-known-hosts: true;
+    ssh {
+        fallback-icon: "server-database";
+    }
+
+    display-drun:               " Apps";
+    drun-display-format:        "{name}\n[<span weight='medium' size='small'>{comment}</span>]";
+    drun-match-fields:          ["name", "generic", "exec", "comment"];
+    drun-show-actions:          false;
+    drun-use-desktop-cache:     false;
+    drun-reload-desktop-cache:  false;
+    drun-url-launcher:          "xdg-open";
+    // drun-categories:         [];
+    // drun-exclude-categories: [];
+    drun {
+        fallback-icon: "application-x-addon";
+    }
+
+    display-combi:          " All";
+    combi-modes:            ["window", "ssh", "drun", "keys", "run", "filebrowser", "recursivebrowser"];
+    combi-display-format:   "{mode}: {text}";
+    combi-hide-mode-prefix: false;
+
+    display-keys: " Keys";
+    keys {
+        fallback-icon: "keyboard";
+    }
+
+    display-filebrowser: "󰷏 File Browser";
+    filebrowser {
+        directory:         "$HOME";
+        sorting-method:    "name";
+        directories-first: true;
+        show-hidden:       true;
+        cancel-returns-1:  true;
+        command:           "xdg-open";
+    }
+
+    display-recursivebrowser: " Files";
+    recursivebrowser {
+        directory:        "$HOME";
+        cancel-returns-1: true;
+        // filter-regex:     "";
+        command:          "xdg-open";
+    }
+}
