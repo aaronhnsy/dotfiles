@@ -2,6 +2,9 @@
 set _asdf_set_java_home "$ASDF_DATA_DIR/plugins/java/set-java-home.fish"
 test -f "$_asdf_set_java_home" && source "$_asdf_set_java_home"
 
+# set java user root
+set -gx _JAVA_OPTIONS "-Djava.util.prefs.userRoot=$XDG_CONFIG_HOME/java"
+
 # set gradle data directory location
 set -gx GRADLE_USER_HOME "$XDG_DATA_HOME/gradle"
 
