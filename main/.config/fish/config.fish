@@ -22,27 +22,19 @@ function fish_postexec --on-event fish_postexec
 end
 
 function fish_title
-    # identity (full hostname)
     set local_user (whoami)
     set local_host (hostname)
     set identity ""
-
     if set -q SSH_CONNECTION
         set identity "$USER@$local_host"
     else if test "$local_user" != "$USER"
         set identity "$local_user@$local_host"
     end
-
-    # full pwd
     set dir (pwd)
-
-    # running job (if one is executing)
     set job ""
     if set -q __fish_current_job
         set job "$__fish_current_job"
     end
-
-    # output format
     if test -n "$identity"
         if test -n "$job"
             echo "$identity: $dir: $job"
@@ -58,3 +50,8 @@ function fish_title
     end
 end
 
+# prompt
+function prompt_newline --on-event fish_postexec
+    echo
+end
+alias clear "command clear; commandline -f clear-screen"

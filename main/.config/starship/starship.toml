@@ -40,6 +40,7 @@ $line_break\
 $character\
 """
 
+add_newline = false
 continuation_prompt = '▶▶ '
 
 palette = "catppuccin"
