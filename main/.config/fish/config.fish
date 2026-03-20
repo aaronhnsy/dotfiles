@@ -2,7 +2,7 @@
 set -g fish_greeting
 
 # theme
-fish_config theme choose catppuccin-macchiato
+fish_config theme choose catppuccin-macchiato --color-theme=dark
 
 # keybinds
 set --global fish_key_bindings fish_default_key_bindings
