@@ -31,7 +31,7 @@
     mantle: #1e2030FF;
     crust:  #181926FF;
     // font
-    font: "JetBrains Mono Nerd Font 12";
+    font: "CaskaydiaMono Nerd Font 11";
 }
 
 // window

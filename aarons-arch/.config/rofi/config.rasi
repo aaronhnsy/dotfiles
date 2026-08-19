@@ -25,9 +25,9 @@ configuration {
     }
 
     show-icons: true;
-    icon-theme: "Papirus";
+    icon-theme: "Papirus-Dark";
 
-	modes: ["drun", "run", "ssh", "window", "keys", "filebrowser", "recursivebrowser", "combi"];
+	modes: ["drun", "run", "ssh", "window", "filebrowser", "recursivebrowser", "combi"];
 
     display-window:      " Windows";
     window-format:       "{c:-1}: {t}";
@@ -72,7 +72,7 @@ configuration {
     }
 
     display-combi:          " All";
-    combi-modes:            ["window", "ssh", "drun", "keys", "run", "filebrowser", "recursivebrowser"];
+    combi-modes:            ["window", "ssh", "drun", "run", "filebrowser", "recursivebrowser"];
     combi-display-format:   "{mode}: {text}";
     combi-hide-mode-prefix: false;
 

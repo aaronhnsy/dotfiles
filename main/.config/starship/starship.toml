@@ -42,6 +42,7 @@ $character\
 
 add_newline = false
 continuation_prompt = '▶▶ '
+add_newline = false
 
 palette = "catppuccin"
 

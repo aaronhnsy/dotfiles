@@ -1,0 +1,126 @@
+[bar]
+bg = "transparent"
+border-color = "transparent"
+border-location = "none"
+border-width = 0
+button-border-location = "none"
+button-border-width = 0
+button-group-background = "transparent"
+button-group-border-color = "transparent"
+button-group-border-width = 0
+button-icon-size = 0.8
+button-label-padding = 0.8
+button-label-weight = "bold"
+button-variant = "basic"
+dropdown-freeze-label = false
+inset-edge = 0.5
+inset-ends = 0.5
+location = "top"
+padding = 0.0
+padding-ends = 0.0
+
+[[bar.layout]]
+center = ["hyprland-workspaces"]
+left = [
+    "dashboard",
+    "media",
+]
+monitor = "*"
+right = [
+    "systray",
+    { modules = [
+        "microphone",
+        "volume",
+    ], name = "Audio" },
+    { modules = [
+        "network",
+        "bluetooth",
+    ], name = "Networking" },
+    { modules = [
+        "clock",
+        "weather",
+    ], name = "Info" },
+    "notifications",
+]
+show = true
+
+[general]
+font-mono = "CaskaydiaMono Nerd Font Mono"
+font-sans = "CaskaydiaMono Nerd Font"
+
+[modules.bluetooth]
+label-show = false
+
+[modules.clock]
+dropdown-show-seconds = true
+format = "%a %d %b @ %I:%M %p (%Z)"
+icon-name = "ld-calendar-clock-symbolic"
+right-click = ""
+
+[modules.hyprland-workspaces]
+app-icons-dedupe = true
+app-icons-show = true
+min-workspace-count = 10
+
+[modules.media]
+icon-type = "spinning-disc"
+label-max-length = 50
+
+[modules.microphone]
+scroll-down = "pactl set-source-volume @DEFAULT_SOURCE@ -5%"
+scroll-up = "pactl set-source-volume @DEFAULT_SOURCE@ +5%"
+
+[modules.network]
+label-show = false
+
+[modules.notification]
+icon-source = "automatic"
+label-show = false
+middle-click = "wayle notify dnd"
+popup-duration = 5000
+popup-gap = 8.0
+popup-max-visible = 10
+popup-monitor = "DP-1"
+popup-position = "top-right"
+popup-stacking-order = "newest-first"
+right-click = ""
+
+[modules.volume]
+dropdown-app-icons = "mapped"
+scroll-down = "pactl set-sink-volume @DEFAULT_SINK@ -5%"
+scroll-up = "pactl set-sink-volume @DEFAULT_SINK@ +5%"
+
+[modules.weather]
+location = "Egham"
+time-format = "24h"
+
+[osd]
+border = true
+duration = 2500
+margin = 0.0
+monitor = "DP-1"
+position = "top"
+
+[styling]
+rounding = "sm"
+scale = 1.0
+
+[styling.palette]
+bg = "#11111b"
+surface = "#181825"
+elevated = "#1e1e2e"
+fg = "#cdd6f4"
+fg-muted = "#bac2de"
+primary = "#b4befe"
+red = "#f38ba8"
+yellow = "#f9e2af"
+green = "#a6e3a1"
+blue = "#74c7ec"
+
+[wallpaper]
+cycling-directory = "/home/aaronhnsy/Pictures/Wallpapers"
+cycling-enabled = true
+cycling-interval-mins = 30
+cycling-mode = "shuffle"
+cycling-same-image = true
+transition-type = "grow"
