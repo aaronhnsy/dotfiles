@@ -1,0 +1,1 @@
+set -gx CODEX_HOME "$XDG_DATA_HOME/codex"
