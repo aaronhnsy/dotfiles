@@ -34,8 +34,8 @@ hl.config({
     },
     decoration = {
         -- window rounding
-        rounding       = 10,
-        rounding_power = 2,
+        rounding       = 16,
+        rounding_power = 3,
         -- window opacity
         fullscreen_opacity = 1.0,
         active_opacity     = 1.0,
@@ -47,11 +47,15 @@ hl.config({
         dim_special  = 0.2,
         dim_around   = 0.4,
         -- window blur
-        blur               = {
-            enabled  = true,
-            size     = 3,
-            passes   = 1,
-            vibrancy = 0.1696,
+        blur = {
+            enabled           = true,
+            size              = 5,
+            passes            = 4,
+            noise             = 0.0,
+            contrast          = 1.15,
+            brightness        = 1.05,
+            vibrancy          = 0.65,
+            vibrancy_darkness = 0.20,
         },
         -- window shadow
         shadow             = {

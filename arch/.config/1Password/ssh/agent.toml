@@ -1,0 +1,7 @@
+[[ssh-keys]]
+item = "aaronhnsy-arch-ssh"
+vault = "Personal"
+
+[[ssh-keys]]
+item = "aaronhnsy-arch-github-authentication"
+vault = "Personal"

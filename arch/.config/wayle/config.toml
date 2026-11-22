@@ -18,6 +18,7 @@ inset-ends = 0.5
 location = "top"
 padding = 0.0
 padding-ends = 0.0
+dropdown-shadow = false
 
 [[bar.layout]]
 center = ["hyprland-workspaces"]
@@ -106,16 +107,16 @@ rounding = "sm"
 scale = 1.0
 
 [styling.palette]
-bg = "#11111b"
-surface = "#181825"
-elevated = "#1e1e2e"
-fg = "#cdd6f4"
-fg-muted = "#bac2de"
-primary = "#b4befe"
-red = "#f38ba8"
-yellow = "#f9e2af"
-green = "#a6e3a1"
-blue = "#74c7ec"
+bg = "#12141A3B"
+surface = "#1C20294D"
+elevated = "#10121830"
+fg = "#F8FAFCF2"
+fg-muted = "#CBD5E1AD"
+primary = "#F8FAFCF2"
+red = "#F8FAFCF2"
+yellow = "#F8FAFCF2"
+green = "#F8FAFCF2"
+blue = "#F8FAFCF2"
 
 [wallpaper]
 cycling-directory = "/home/aaronhnsy/Pictures/Wallpapers"

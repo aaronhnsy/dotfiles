@@ -1,7 +1,7 @@
 [include]
     path = "common-config"
 [user]
-    signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIH8WhAwcMzDN2gqYfGVS92zahudW4SJCmnXvWA60rMuJ
+    signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBs7llZNjmaqtl9lki6pd4k1LOR/heRIL8hLrcpMRfhW
 [commit]
     gpgsign = true
 [gpg]

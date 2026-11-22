@@ -14,23 +14,27 @@
     sapphire:  #7dc4e4FF;
     blue:      #8aadf4FF;
     lavender:  #b7bdf8FF;
+
     /* text */
     text:     #cad3f5FF;
     subtext1: #b8c0e0FF;
     subtext0: #a5adcbFF;
+
     /* overlays */
     overlay2: #939ab7FF;
     overlay1: #8087a2FF;
     overlay0: #6e738dFF;
+
     /* surfaces */
-    surface2: #5b6078FF;
-    surface1: #494d64FF;
-    surface0: #363a4fFF;
+    surface2: #10121866;
+    surface1: #10121866;
+    surface0: #1C20294D;
+
     /* bases */
-    base:   #24273aFF;
-    mantle: #1e2030FF;
-    crust:  #181926FF;
-    // font
+    base:   #12141A38;
+    mantle: #1C20294D;
+    crust:  #10121866;
+
     font: "CaskaydiaMono Nerd Font 11";
 }
 
@@ -80,7 +84,7 @@ textbox-prompt-colon {
     padding: 4px 5px 4px 5px;
     expand:  false;
     // colors
-    background-color: inherit;
+    background-color: transparent;
     text-color:       inherit;
     // special
     content: "";
@@ -92,7 +96,7 @@ entry {
     // dimensions
     padding: 4px 0px;
     // colors
-    background-color:  inherit;
+    background-color:  transparent;
     text-color:        inherit;
     // special
     placeholder: "search...";
@@ -105,7 +109,7 @@ num-filtered-rows {
     padding: 4px 0px;
     expand:  false;
     // colors
-    background-color: inherit;
+    background-color: transparent;
     text-color:       @subtext0;
 }
 textbox-num-sep {
@@ -115,7 +119,7 @@ textbox-num-sep {
     padding: 4px 0px;
     expand:  false;
     // colors
-    background-color: inherit;
+    background-color: transparent;
     text-color:       @subtext0;
     // special
     content: "/";
@@ -127,7 +131,7 @@ num-rows {
     padding: 4px 4px 4px 0px;
     expand:  false;
     // colors
-    background-color: inherit;
+    background-color: transparent;
     text-color:       @subtext0;
 }
 
@@ -168,7 +172,7 @@ button {
 }
 button selected {
     background-color: @blue;
-    text-color:       @base;
+    text-color:       #12141AFF;
 }
 
 // message
@@ -244,24 +248,24 @@ element normal.normal {
 }
 element normal.urgent {
     background-color: @red;
-    text-color:       @base;
+    text-color:       #12141AFF;
 }
 element normal.active {
     background-color: @sapphire;
-    text-color:       @base;
+    text-color:       #12141AFF;
 }
 // selected elements
 element selected.normal {
     background-color: @blue;
-    text-color:       @base;
+    text-color:       #12141AFF;
 }
 element selected.urgent {
     background-color: @maroon;
-    text-color:       @base;
+    text-color:       #12141AFF;
 }
 element selected.active {
     background-color: @sapphire;
-    text-color:       @base;
+    text-color:       #12141AFF;
 }
 // alternating elements
 element alternate.normal {
@@ -270,11 +274,11 @@ element alternate.normal {
 }
 element alternate.urgent {
     background-color: @red;
-    text-color:       @base;
+    text-color:       #12141AFF;
 }
 element alternate.active {
     background-color: @sapphire;
-    text-color:       @base;
+    text-color:       #12141AFF;
 }
 // element icon
 element-icon {

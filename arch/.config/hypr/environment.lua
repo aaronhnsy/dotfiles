@@ -36,3 +36,6 @@ hl.env("SDL_VIDEODRIVER", "wayland")
 -- cursor
 hl.env("HYPRCURSOR_THEME", "macOS-hypr")
 hl.env("HYPRCURSOR_SIZE", "24")
+
+-- gtk
+hl.env("GTK2_RC_FILES", os.getenv("XDG_CONFIG_HOME") .. "/gtk-2.0/gtkrc" .. ":" .. os.getenv("XDG_CONFIG_HOME") .. "/gtk-2.0/gtkrc.mine")
