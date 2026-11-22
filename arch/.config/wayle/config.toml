@@ -78,13 +78,14 @@ label-show = false
 icon-source = "automatic"
 label-show = false
 middle-click = "wayle notify dnd"
-popup-duration = 5000
+popup-duration = 3000
 popup-gap = 8.0
 popup-max-visible = 10
 popup-monitor = "DP-1"
 popup-position = "top-right"
 popup-stacking-order = "newest-first"
 right-click = ""
+popup-urgency-bar = "none"
 
 [modules.volume]
 dropdown-app-icons = "mapped"
@@ -97,7 +98,7 @@ time-format = "24h"
 
 [osd]
 border = true
-duration = 2500
+duration = 3000
 margin = 0.0
 monitor = "DP-1"
 position = "top"
@@ -124,4 +125,4 @@ cycling-enabled = true
 cycling-interval-mins = 30
 cycling-mode = "shuffle"
 cycling-same-image = true
-transition-type = "grow"
+transition-type = "random"

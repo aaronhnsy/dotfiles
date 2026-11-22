@@ -4,9 +4,6 @@ hl.monitor({
     position = "0x0",
     scale    = 1,
     bitdepth = 10,
-    cm       = "srgb",
-    sdrbrightness = 1,
-    sdrsaturation = 1,
 })
 hl.workspace_rule({ monitor = "DP-1", workspace = "1", default = true })
 hl.workspace_rule({ monitor = "DP-1", workspace = "2"  })
@@ -20,9 +17,6 @@ hl.monitor({
     position = "2560x180",
     scale    = 1,
     bitdepth = 10,
-    cm       = "srgb",
-    sdrbrightness = 1,
-    sdrsaturation = 1,
 })
 hl.workspace_rule({ monitor = "DP-2", workspace = "6", default = true })
 hl.workspace_rule({ monitor = "DP-2", workspace = "7"  })
@@ -31,12 +25,10 @@ hl.workspace_rule({ monitor = "DP-2", workspace = "9"  })
 hl.workspace_rule({ monitor = "DP-2", workspace = "10" })
 
 hl.window_rule({
-    name  = "suppress-maximize-events",
-    match = { class = ".*" },
-
+    name           = "suppress-maximize-events",
+    match          = { class = ".*" },
     suppress_event = "maximize",
 })
-
 hl.window_rule({
     name  = "fix-xwayland-drags",
     match = {
@@ -47,17 +39,17 @@ hl.window_rule({
         fullscreen = false,
         pin        = false,
     },
-
     no_focus = true,
 })
 
 hl.layer_rule({
     match = {
-        namespace = "rofi"
+        namespace = "^(rofi.*)$"
     },
-    blur = true,
+    blur         = true,
+    blur_popups  = true,
     ignore_alpha = 0.0,
-    dim_around = true,
+    dim_around   = true,
 })
 
 hl.layer_rule({
@@ -67,4 +59,11 @@ hl.layer_rule({
     blur         = true,
     blur_popups  = true,
     ignore_alpha = 0.0,
+})
+
+hl.window_rule({
+    match = {
+        class = "^com\\.wayle\\.settings$",
+    },
+    opacity = "1.0 override",
 })
