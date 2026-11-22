@@ -5,3 +5,7 @@ vault = "Personal"
 [[ssh-keys]]
 item = "aaronhnsy-arch-github-authentication"
 vault = "Personal"
+
+[[ssh-keys]]
+item = "aaronhnsy-arch-git-signer"
+vault = "Personal"
