@@ -39,3 +39,7 @@ hl.env("HYPRCURSOR_SIZE", "24")
 
 -- gtk
 hl.env("GTK2_RC_FILES", os.getenv("XDG_CONFIG_HOME") .. "/gtk-2.0/gtkrc" .. ":" .. os.getenv("XDG_CONFIG_HOME") .. "/gtk-2.0/gtkrc.mine")
+
+-- nvidia
+hl.env("CUDA_CACHE_PATH", "$XDG_CACHE_HOME/nv")
+hl.env("__GL_SHADER_DISK_CACHE_PATH", "$XDG_CACHE_HOME/nv")
