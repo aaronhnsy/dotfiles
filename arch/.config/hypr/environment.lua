@@ -9,7 +9,6 @@ hl.env("XDG_SESSION_DESKTOP", "Hyprland")
 
 -- backends
 hl.env("GDK_BACKEND", "wayland,x11,*")
-hl.env("QT_QPA_PLATFORM", "wayland;xcb")
 hl.env("CLUTTER_BACKEND", "wayland")
 hl.env("SDL_VIDEODRIVER", "wayland")
 
@@ -31,18 +30,11 @@ hl.env("CUDA_DISABLE_PERF_BOOST", "0")
 
 -- qt
 hl.env("QT_QPA_PLATFORMTHEME", "qt6ct")
-hl.env("QT_STYLE_OVERRIDE", "kvantum")
-hl.env("QT_WAYLAND_DISABLE_WINDOWDECORATION", "1")
-hl.env("QT_QUICK_CONTROLS_STYLE", "org.hyprland.style")
-
--- gtk
-hl.env("GTK2_RC_FILES", config_home .. "/gtk-2.0/gtkrc" .. ":" .. config_home .. "/gtk-2.0/gtkrc.mine")
+hl.env("QT_QPA_PLATFORM", "wayland;xcb")
 
 -- cursor
-hl.env("HYPRCURSOR_THEME", "macOS-hypr")
+hl.env("HYPRCURSOR_THEME", "oblique-cursor-dark")
 hl.env("HYPRCURSOR_SIZE", "24")
-hl.env("XCURSOR_THEME", "macOS-hypr")
-hl.env("XCURSOR_SIZE", "24")
 
 -- electron
 hl.env("ELECTRON_OZONE_PLATFORM_HINT", "auto")

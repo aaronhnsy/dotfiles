@@ -4,3 +4,9 @@
 [submodule "main/.config/tmux/plugins/catppuccin"]
 	path = main/.config/tmux/plugins/catppuccin
 	url = https://github.com/catppuccin/tmux
+[submodule "arch/.local/share/themes/colloid-gtk-theme"]
+	path = vendor/colloid-gtk-theme
+	url = https://github.com/vinceliuice/Colloid-gtk-theme.git
+[submodule "arch/.local/share/icons/oblique-cursor-theme"]
+	path = vendor/oblique-cursor-theme
+	url = https://github.com/kayxean/oblique-cursor

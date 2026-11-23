@@ -34,8 +34,8 @@ hl.config({
     },
     decoration = {
         -- window rounding
-        rounding       = 16,
-        rounding_power = 3,
+        rounding       = 8,
+        rounding_power = 4.0,
         -- window opacity
         fullscreen_opacity = 1.0,
         active_opacity     = 1.0,

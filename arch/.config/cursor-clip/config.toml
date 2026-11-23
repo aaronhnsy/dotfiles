@@ -1,0 +1,4 @@
+show_trash = true
+show_pin = true
+persistence_enabled = true
+instant_paste = true

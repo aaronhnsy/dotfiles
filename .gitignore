@@ -3,3 +3,24 @@
 
 # ide
 .idea/
+
+# gtk3.0
+arch/.config/gtk-3.0/*
+!arch/.config/gtk-3.0/settings.ini
+
+# gtk4.0
+arch/.config/gtk-4.0/*
+!arch/.config/gtk-4.0/settings.ini
+
+# luciole
+arch/.config/luciole/*
+!arch/.config/luciole/settings.toml
+
+# wayle
+arch/.config/wayle/tombi.toml
+arch/.config/wayle/schema.json
+arch/.config/wayle/themes/schema.json
+
+# themes
+arch/.local/share/themes/Colloid*Catppuccin*
+arch/.local/share/icons/oblique-cursor*
