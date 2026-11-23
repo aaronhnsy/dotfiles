@@ -31,6 +31,7 @@ hl.env("CUDA_DISABLE_PERF_BOOST", "0")
 
 -- qt
 hl.env("QT_QPA_PLATFORMTHEME", "qt6ct")
+hl.env("QT_STYLE_OVERRIDE", "kvantum")
 hl.env("QT_WAYLAND_DISABLE_WINDOWDECORATION", "1")
 hl.env("QT_QUICK_CONTROLS_STYLE", "org.hyprland.style")
 
