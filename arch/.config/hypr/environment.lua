@@ -1,5 +1,6 @@
-local config_home = os.getenv("XDG_CONFIG_HOME")
-local cache_home = os.getenv("XDG_CACHE_HOME")
+local home = os.getenv("HOME")
+local config_home = os.getenv("XDG_CONFIG_HOME") or home .. "/.config"
+local cache_home = os.getenv("XDG_CACHE_HOME") or  home .. "/.cache/"
 
 -- xdg
 hl.env("XDG_SESSION_TYPE", "wayland")

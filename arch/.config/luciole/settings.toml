@@ -1,0 +1,25 @@
+schema_version = 1
+
+[browser]
+always_show_status_bar = true
+always_show_tab_bar = false
+chooser_show_preview = true
+corner_radius_scale = 1.5
+directories_first = true
+hidden_last = false
+preview_width = 400
+show_accessed_column = false
+show_created_column = true
+show_group_column = false
+show_hidden = true
+show_location_column = false
+show_modified_column = false
+show_owner_column = true
+show_permanent_deletion = true
+show_permissions_column = false
+show_size_column = true
+show_type_column = true
+sidebar_width = 200
+sort_by = "name"
+sort_descending = false
+view_mode = "list"
