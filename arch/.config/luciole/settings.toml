@@ -20,5 +20,5 @@ show_permissions_column = false
 show_size_column = true
 show_type_column = true
 sidebar_width = 200
-sort_by = "type"
+sort_by = "name"
 sort_descending = false
