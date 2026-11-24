@@ -183,3 +183,21 @@ hl.bind(
     hl.dsp.exec_cmd("playerctl next"),
     { locked = true }
 )
+
+-- screenshot monitor
+hl.bind(
+    "Print",
+    hl.dsp.exec_cmd("hyprshot -m output -o ~/Pictures/Screenshots")
+)
+
+-- screenshot window
+hl.bind(
+    "SHIFT + Print",
+    hl.dsp.exec_cmd("hyprshot -m window -o ~/Pictures/Screenshots")
+)
+
+-- screenshot region
+hl.bind(
+    "CTRL + Print",
+    hl.dsp.exec_cmd("hyprshot -m region -o ~/Pictures/Screenshots")
+)

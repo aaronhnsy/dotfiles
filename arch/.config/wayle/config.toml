@@ -8,7 +8,7 @@ button-border-width = 0
 button-group-background = "transparent"
 button-group-border-color = "transparent"
 button-group-border-width = 0
-button-icon-size = 0.8
+button-icon-size = 0.75
 button-label-padding = 0.8
 button-label-weight = "bold"
 button-variant = "basic"
@@ -19,6 +19,7 @@ location = "top"
 padding = 0.0
 padding-ends = 0.0
 dropdown-shadow = false
+background-opacity = 0
 
 [[bar.layout]]
 center = ["hyprland-workspaces"]
@@ -59,9 +60,14 @@ icon-name = "ld-calendar-clock-symbolic"
 right-click = ""
 
 [modules.hyprland-workspaces]
-app-icons-dedupe = true
+app-icons-dedupe = false
 app-icons-show = true
 min-workspace-count = 10
+active-indicator = "underline"
+active-color = "fg-default"
+occupied-color = "fg-subtle"
+container-bg-color = "bg-base"
+border-color = "transparent"
 
 [modules.media]
 icon-type = "spinning-disc"
@@ -108,16 +114,16 @@ rounding = "sm"
 scale = 1.0
 
 [styling.palette]
-bg = "#12141A3B"
-surface = "#1C20294D"
-elevated = "#10121830"
-fg = "#F8FAFCF2"
-fg-muted = "#CBD5E1AD"
-primary = "#F8FAFCF2"
-red = "#F8FAFCF2"
-yellow = "#F8FAFCF2"
-green = "#F8FAFCF2"
-blue = "#F8FAFCF2"
+bg = "#20202025"
+surface = "#20202033"
+elevated = "#20202042"
+fg = "#ffffff"
+fg-muted = "#ffffff"
+primary = "#ffffff"
+red = "#ffffff"
+yellow = "#ffffff"
+green = "#ffffff"
+blue = "#ffffff"
 
 [wallpaper]
 cycling-directory = "/home/aaronhnsy/Pictures/Wallpapers"
@@ -126,3 +132,5 @@ cycling-interval-mins = 30
 cycling-mode = "shuffle"
 cycling-same-image = true
 transition-type = "random"
+transition-duration = 2.0
+transition-fps = 165

@@ -1,5 +1,7 @@
 require("environment")
 require("monitors")
+require("windows")
+require("layers")
 require("input")
 require("animations")
 
@@ -48,21 +50,15 @@ hl.config({
         dim_around   = 0.4,
         -- window blur
         blur = {
-            enabled           = true,
-            size              = 5,
-            passes            = 4,
-            noise             = 0.0,
-            contrast          = 1.15,
-            brightness        = 1.05,
-            vibrancy          = 0.65,
-            vibrancy_darkness = 0.20,
+            enabled            = true,
+            size               = 2,
+            passes             = 3,
+            popups             = true,
+            popups_ignorealpha = 0.0,
         },
         -- window shadow
-        shadow             = {
-            enabled      = true,
-            range        = 4,
-            render_power = 3,
-            color        = 0xee1a1a1a,
+        shadow = {
+            enabled = false,
         },
     },
     misc = {
